@@ -1,7 +1,28 @@
+/* media start */
+
 @media(max-width: 1240px) {
     .reports__item-title {
         font-size: 18px;
     }
+
+    .team:first-child {
+        padding-right: 0;
+        border: none;
+    }
+
+    .team + .team {
+        margin-top: 50px;
+    }
+
+    .about__sliders {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .page__about {
+        padding-bottom: 0 !important;
+    }
+
 }
 
 
@@ -163,6 +184,14 @@
 
     .news__inner {
         grid-template-columns: repeat(3, 1fr);
+    }
+
+    .page__about {
+        padding-top: 135px !important;
+    }
+
+    .news__page {
+        padding-top: 140px;
     }
 
 }
@@ -336,6 +365,10 @@
     .projects__item:hover {
         transform: scaleY(1);
     }
+
+    .news__page {
+        padding-top: 120px;
+    }
 }
 
 @media(max-width: 830px) {
@@ -427,6 +460,37 @@
     .footer__inner {
         padding-left: 45px;
     }
+
+    .team__title {
+        font-size: 22px;
+        line-height: 24px;
+        padding-left: 20px;
+        margin-bottom: 20px;
+    }
+
+    .team__slider .click__arrow {
+        top: -17%;
+    }
+
+    .team__slider .click__arrow.prev {
+        right: 80px;
+    }
+
+    .team__slider .click__arrow.next {
+        right: 10px;
+    }
+
+    .team {
+        width: 100%;
+    }
+
+    .news__page-text {
+        font-size: 18px;
+    }
+
+    .news__page-date {
+        margin: 10px 0;
+    }
 }
 
 @media(max-width: 550px) {
@@ -467,6 +531,10 @@
     .projects__slider {
         max-width: 320px;
         margin: 0 auto;
+    }
+
+    .about__sliders {
+        margin-top: 50px;
     }
 
 }
@@ -515,7 +583,7 @@
     }
 
     .footer__about,
-    .footer__partners{
+    .footer__partners {
         text-align: center;
     }
 
@@ -527,6 +595,15 @@
         margin-top: 10px;
     }
 
+    .news__page-text {
+        font-size: 15px;
+        line-height: 18px;
+    }
+
+
+    .news__page-text + .news__page-text {
+        margin-top: 15px;
+    }
 }
 
 @media(max-width: 420px) {
@@ -553,6 +630,7 @@
         margin: 0px 0 5px;
         font-size: 12px;
     }
+
 }
 
 
@@ -569,3 +647,6 @@
         left: 15%;
     }
 }
+
+
+/* media end */

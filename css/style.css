@@ -69,6 +69,11 @@ section {
   background-position: center;
 }
 
+.main {
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+
 .body {
   position: relative;
   overflow-x: hidden;
@@ -92,6 +97,7 @@ section {
   color: #FEFEFE;
   text-transform: uppercase;
   cursor: pointer;
+  border: none;
 }
 .page__title {
   font-weight: 900;
@@ -104,6 +110,9 @@ section {
   font-family: "Calibri-Light";
   font-size: 14px;
   line-height: 143.69%;
+}
+.page__about {
+  padding-top: 190px !important;
 }
 
 /* burger start */
@@ -396,6 +405,8 @@ section {
 .intro__content-btn {
   padding: 14px 33px;
   margin-right: 23px;
+  border: none;
+  outline: none;
 }
 .intro__content-link {
   display: inline-block;
@@ -438,6 +449,15 @@ section {
      object-position: center;
   margin-right: 77px;
 }
+.about__sliders {
+  margin-top: 90px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
 .about__text {
   margin: 20px 0 50px;
 }
@@ -471,10 +491,139 @@ section {
   margin-bottom: 10px;
 }
 
+.team:first-child {
+  border-right: 0.6px solid rgba(0, 0, 0, 0.1);
+  padding-right: 40px;
+}
+.team__title {
+  font-size: 24px;
+  line-height: 29px;
+  margin-bottom: 36px;
+}
+.team__slider {
+  max-width: 560px;
+}
+.team__slider .click__arrow {
+  background: none;
+  border: none;
+  width: 30px;
+  height: 30px;
+  cursor: pointer;
+  padding: 0;
+  border-radius: 50%;
+  position: absolute;
+  top: -22%;
+  right: 0;
+  -webkit-box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.05);
+  z-index: 5;
+}
+.team__slider .click__arrow.prev {
+  right: 50px;
+  -webkit-transform: rotate(180deg);
+          transform: rotate(180deg);
+}
+.team__slider .click__arrow img {
+  border-radius: 50%;
+}
+.team__item {
+  margin: 0 7px;
+  padding: 28px 19px 36px;
+  background-color: rgba(255, 255, 255, 0.7);
+  -webkit-box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+          box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+  border-radius: 22px;
+  width: 180px;
+  display: -webkit-box !important;
+  display: -ms-flexbox !important;
+  display: flex !important;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  text-align: center;
+}
+.team__img {
+  width: 99px;
+  height: 99px;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+  border-radius: 50%;
+  margin-bottom: 23px;
+}
+.team__name, .team__patronymic {
+  color: #2E2E2E;
+  font-size: 14px;
+  line-height: 17px;
+}
+.team__name {
+  font-weight: 700;
+  margin-bottom: 18px;
+}
+.team__patronymic {
+  font-weight: 900;
+  text-transform: uppercase;
+}
+.team__post {
+  font-family: "Calibri-Light";
+  font-weight: 300;
+  font-size: 14px;
+  line-height: 143.69%;
+  margin-bottom: 7px;
+}
+.team__social {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+.team__social img {
+  width: 24px;
+  height: 24px;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+.team__social img + img {
+  margin-left: 10px;
+}
+
 /* about end */
 /* news start */
 .news {
   padding: 52px 0 66px;
+}
+.news__page {
+  padding-top: 200px;
+  font-family: "Calibri";
+  color: #224268;
+}
+.news__page-title {
+  margin-bottom: 32px;
+}
+.news__page-img {
+  border-radius: 22px 12px 22px 0px;
+  width: 100%;
+  max-height: 396px;
+  -o-object-fit: contain;
+     object-fit: contain;
+  -o-object-position: center;
+     object-position: center;
+}
+.news__page-date {
+  font-size: 15px;
+  line-height: 18px;
+  margin: 22px 0;
+}
+.news__page-text {
+  font-size: 20px;
+  line-height: 150%;
+}
+.news__page-text + .news__page-text {
+  margin-top: 30px;
 }
 .news__title {
   margin-bottom: 40px;
@@ -950,9 +1099,33 @@ section {
 
 /* footer end */
 /* media start */
+/* media start */
 @media (max-width: 1240px) {
   .reports__item-title {
     font-size: 18px;
+  }
+
+  .team:first-child {
+    padding-right: 0;
+    border: none;
+  }
+
+  .team + .team {
+    margin-top: 50px;
+  }
+
+  .about__sliders {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+
+  .page__about {
+    padding-bottom: 0 !important;
   }
 }
 @media (max-width: 1200px) {
@@ -1107,6 +1280,14 @@ section {
   .news__inner {
     -ms-grid-columns: (1fr)[3];
     grid-template-columns: repeat(3, 1fr);
+  }
+
+  .page__about {
+    padding-top: 135px !important;
+  }
+
+  .news__page {
+    padding-top: 140px;
   }
 }
 @media (max-width: 1000px) {
@@ -1289,6 +1470,10 @@ section {
     -webkit-transform: scaleY(1);
             transform: scaleY(1);
   }
+
+  .news__page {
+    padding-top: 120px;
+  }
 }
 @media (max-width: 830px) {
   .projects .arrow-next {
@@ -1384,6 +1569,37 @@ section {
   .footer__inner {
     padding-left: 45px;
   }
+
+  .team__title {
+    font-size: 22px;
+    line-height: 24px;
+    padding-left: 20px;
+    margin-bottom: 20px;
+  }
+
+  .team__slider .click__arrow {
+    top: -17%;
+  }
+
+  .team__slider .click__arrow.prev {
+    right: 80px;
+  }
+
+  .team__slider .click__arrow.next {
+    right: 10px;
+  }
+
+  .team {
+    width: 100%;
+  }
+
+  .news__page-text {
+    font-size: 18px;
+  }
+
+  .news__page-date {
+    margin: 10px 0;
+  }
 }
 @media (max-width: 550px) {
   .about__text {
@@ -1429,6 +1645,10 @@ section {
   .projects__slider {
     max-width: 320px;
     margin: 0 auto;
+  }
+
+  .about__sliders {
+    margin-top: 50px;
   }
 }
 @media (max-width: 500px) {
@@ -1494,6 +1714,15 @@ section {
   .footer__list-item + .footer__list-item {
     margin-top: 10px;
   }
+
+  .news__page-text {
+    font-size: 15px;
+    line-height: 18px;
+  }
+
+  .news__page-text + .news__page-text {
+    margin-top: 15px;
+  }
 }
 @media (max-width: 420px) {
   .intro__content-text {
@@ -1533,4 +1762,5 @@ section {
     left: 15%;
   }
 }
+/* media end */
 /* media end */

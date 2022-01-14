@@ -22,6 +22,31 @@ $(document).ready(function () {
         speed: 300,
     });
 
+    $('.team__slider').slick({
+        nextArrow: '<button class="click__arrow next"><img src="images/icons/slider-arrow.svg" alt=""></button>',
+        prevArrow: '<button class="click__arrow prev"><img src="images/icons/slider-arrow.svg" alt=""></button>',
+        slidesToShow: 3,
+        responsive: [
+            {
+                breakpoint: 600,
+                settings: {
+                    slidesToShow: 2,
+                    slidesToScroll: 1,
+                }
+            },
+            {
+                breakpoint: 430,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: true,
+                    centerPadding: '60px',
+                }
+            }
+            ]
+
+    });
+
     $('.projects__slider').slick({
         nextArrow: $('.arrow-next'),
         prevArrow: $('.arrow-prev'),

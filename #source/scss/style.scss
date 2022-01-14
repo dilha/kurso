@@ -70,6 +70,11 @@ section {
     background-position: center;
 }
 
+.main {
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
 .body {
     position: relative;
     overflow-x: hidden;
@@ -86,6 +91,8 @@ section {
     margin: 0 auto;
 }
 
+
+
 .page {
     &__btn {
         background: #F14260;
@@ -94,6 +101,7 @@ section {
         color: #FEFEFE;
         text-transform: uppercase;
         cursor: pointer;
+        border: none;
     }
 
     &__title {
@@ -108,6 +116,11 @@ section {
         font-family: 'Calibri-Light';
         font-size: 14px;
         line-height: 143.69%;
+    }
+
+
+    &__about {
+        padding-top: 190px !important;
     }
 }
 
@@ -430,6 +443,8 @@ section {
         &-btn {
             padding: 14px 33px;
             margin-right: 23px;
+            border: none;
+            outline: none;
         }
 
 
@@ -480,6 +495,13 @@ section {
         margin-right: 77px;
     }
 
+    &__sliders {
+        margin-top: 90px;
+        display: flex;
+        justify-content: space-between;
+
+    }
+
     &__text {
         margin: 20px 0 50px;
     }
@@ -509,8 +531,109 @@ section {
             margin-bottom: 10px;
         }
     }
+}
 
+.team {
 
+    &:first-child {
+        border-right: 0.6px solid rgba(0, 0, 0, 0.1);
+        padding-right: 40px;
+    }
+
+    &__title {
+        font-size: 24px;
+        line-height: 29px;
+        margin-bottom: 36px;
+    }
+
+    &__slider {
+        max-width: 560px;
+
+        .click__arrow {
+            background: none;
+            border: none;
+            width: 30px;
+            height: 30px;
+            cursor: pointer;
+            padding: 0;
+            border-radius: 50%;
+            position: absolute;
+            top: -22%;
+            right: 0;
+            box-shadow: 0px 4px 17px rgba(0, 0, 0, 0.05);
+            z-index: 5;
+
+            &.prev {
+                right: 50px;
+                transform: rotate(180deg);
+            }
+
+            img {
+                border-radius: 50%;
+            }
+        }
+    }
+
+    &__item {
+        margin: 0 7px;
+        padding: 28px 19px 36px;
+        background-color: rgba(255, 255, 255, 0.7);
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.05);
+        border-radius: 22px;
+        width: 180px;
+        display: flex !important;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+
+    &__img {
+        width: 99px;
+        height: 99px;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+        margin-bottom: 23px;
+    }
+
+    &__name,
+    &__patronymic {
+        color: #2E2E2E;
+        font-size: 14px;
+        line-height: 17px;
+    }
+
+    &__name {
+        font-weight: 700;
+        margin-bottom: 18px;
+    }
+
+    &__patronymic {
+        font-weight: 900;
+        text-transform: uppercase;
+    }
+
+    &__post {
+        font-family: 'Calibri-Light';
+        font-weight: 300;
+        font-size: 14px;
+        line-height: 143.69%;
+        margin-bottom: 7px;
+    }
+
+    &__social {
+        display: flex;
+
+        img {
+            width: 24px;
+            height: 24px;
+            object-fit: cover;
+        }
+
+        img + img {
+            margin-left: 10px;
+        }
+    }
 }
 
 /* about end */
@@ -519,6 +642,39 @@ section {
 
 .news {
     padding: 52px 0 66px;
+
+    &__page {
+        padding-top: 200px;
+        font-family: 'Calibri';
+        color: #224268;
+
+        &-title {
+            margin-bottom: 32px;
+        }
+
+        &-img {
+            border-radius: 22px 12px 22px 0px;
+            width: 100%;
+            max-height: 396px;
+            object-fit: contain;
+            object-position: center;
+        }
+
+        &-date {
+            font-size: 15px;
+            line-height: 18px;
+            margin: 22px 0;
+        }
+
+        &-text {
+            font-size: 20px;
+            line-height: 150%;
+        }
+
+        &-text + &-text {
+            margin-top: 30px;
+        }
+    }
 
     &__title {
         margin-bottom: 40px;

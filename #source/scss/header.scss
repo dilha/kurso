@@ -1,0 +1,216 @@
+
+
+/* burger start */
+
+
+.burger {
+    display: none;
+    background-color: transparent;
+    border: none;
+    outline: none;
+    padding: 0;
+    cursor: pointer;
+    z-index: 100;
+
+    &.burger--active {
+        .burger-line {
+            opacity: 0;
+            transition: opacity 0s;
+        }
+
+        &::after {
+            width: 45px;
+            transform: translateY(-16px) rotate(-135deg);
+        }
+
+        &::before {
+            transform: translateY(13px) rotate(135deg);
+        }
+    }
+
+    &::before,
+    &::after {
+        content: '';
+        transition: transform .2s linear;
+        width: 45px;
+        height: 4px;
+        background-color: #00AEEF;
+        display: block;
+        margin-bottom: 10px;
+    }
+
+    &::after {
+        margin-bottom: 0;
+        margin-left: auto;
+    }
+
+    &-line {
+        background-color: #00AEEF;
+        width: 45px;
+        height: 4px;
+        display: block;
+        margin-bottom: 10px;
+        transition: opacity .7s;
+    }
+}
+
+/* burger end */
+
+/* header start */
+
+.header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: 0;
+    padding: 30px 0;
+    z-index: 100;
+    transition: all .2s linear;
+
+    &.active {
+        background-color: #fff;
+        padding: 15px;
+        box-shadow: 0px 5px 10px 0px rgba(34, 60, 80, 0.2);
+
+        .header__contacts {
+            top: 5px;
+
+            &-email,
+            &-whatsaap {
+                display: none;
+            }
+        }
+    }
+
+    &__logo {
+        margin-right: 45px;
+    }
+
+    &__inner {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+    }
+
+    &__item {
+        align-items: center;
+        display: flex;
+        justify-content: space-between;
+        width: 80%;
+
+        &-box {
+            position: fixed;
+            right: 0;
+            left: 0;
+            top: 0;
+            bottom: 0;
+            z-index: 20;
+            height: 100vh;
+            display: none;
+        }
+    }
+
+
+
+    &__language {
+        font-weight: 700;
+        font-size: 14px;
+        line-height: 18px;
+        text-transform: uppercase;
+
+        a {
+            padding: 0 10px;
+
+            &:hover {
+                font-weight: 900;
+            }
+        }
+
+        a + a {
+            border-left: 0.6px solid #363B57;
+        }
+    }
+
+    &__list {
+        display: flex;
+        align-items: center;
+
+        &-item {
+            & + & {
+                margin-left: 60px;
+            }
+        }
+
+        &-link {
+            font-size: 16px;
+            line-height: 19px;
+            text-transform: uppercase;
+        }
+    }
+
+    &__contacts {
+        position: relative;
+        transition: all .2s linear;
+        top: 30px;
+
+        &-phone {
+            font-family: 'Roboto Slab', serif;
+            font-weight: bold;
+            font-size: 22px;
+            line-height: 29px;
+            margin-bottom: 16px;
+            padding-left: 40px;
+
+            position: relative;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: 2px;
+                left: 0;
+                width: 24px;
+                height: 24px;
+                background-repeat: no-repeat;
+                background-image: url(../images/icons/phone.svg);
+            }
+        }
+
+        a {
+            display: block;
+            position: relative;
+            margin-left: 40px;
+            padding-left: 30px;
+            font-size: 13px;
+            line-height: 16px;
+            transition: all .2s linear;
+
+            &::before {
+                content: '';
+                position: absolute;
+                top: -3px;
+                left: 0;
+                background-repeat: no-repeat;
+            }
+        }
+
+        &-email {
+            margin-bottom: 14px;
+
+            &::before {
+                background-image: url(../images/icons/message.svg);
+                width: 21.33px;
+                height: 15px;
+            }
+        }
+
+        &-whatsaap {
+            &::before {
+                background-image: url(../images/icons/whatsapp.svg);
+                width: 20px;
+                height: 20px;
+            }
+        }
+    }
+}
+
+/* header end */
